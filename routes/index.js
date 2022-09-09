@@ -23,4 +23,13 @@ router.get('/', async function(req, res, next) {
     }
 });
 
-module.exports = router;
+
+router.get('/test', function(req, res){
+    res.render('test.njk', {
+        title: 'Chruch of 6P',
+        intro: 'Welcome to the Chruch of 6P',
+        breadtext: 'In 6P we trust',
+        foot: 'Do not be tempted by the 2HS devil',
+    });
+})
+    module.exports = router;
